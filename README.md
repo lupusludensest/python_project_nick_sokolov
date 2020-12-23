@@ -218,10 +218,9 @@ login varchar(25)
 password varchar(25)
 
 
-Products
+products
 ---
 id int PK
-category_id int FK >- Product_category
 product_name varchar(50)
 product_brand varchar(40)
 year_of_manufacture int
@@ -229,33 +228,39 @@ color char(25)
 description text
 price money
 
-Product_category
+products_catecories
+---
+id int PK
+product_id int FK >- products.id
+category_id int FK >- categories.id
+
+categories
 ---
 id int PK
 category varchar(30)
 description text
 
-Orders
+orders
 ---
 id int PK
-client_id int FK >- Client
+client_id int FK >- client.id
 date datetime
 pyment_method char(20)
 delivery_method char(30)
 delivery_date datetime
 total_price money
 
-Carts
+carts
 ---
 id int PK
-order_id int FK >- Orders
-product_id int FK >- Products
+order_id int FK >- orders.id
+product_id int FK >- products
 date datetime
 item_price money
 product_quantity int
 sub_total money
 
-Client
+client
 ---
 id int PK
 first_name char(60)
