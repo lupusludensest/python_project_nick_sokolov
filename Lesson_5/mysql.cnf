@@ -1,0 +1,5 @@
+[client]
+database = les_5_online_store
+user = online_store_user
+password = MyUSA2016!@
+default-character-set = utf8
