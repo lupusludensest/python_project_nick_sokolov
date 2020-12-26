@@ -27,7 +27,3 @@ class ProductCategory(models.Model):
 
     product = models.ForeignKey(Product, blank=False, null=False, verbose_name='Good', on_delete=models.CASCADE)
     category = models.ForeignKey(Category, blank=False, null=False, verbose_name='Category', on_delete=models.CASCADE)
-
-
-
-
