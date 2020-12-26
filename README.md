@@ -177,6 +177,7 @@ time_update datetime
 5. Покупатель
 Поля на ваше усмотрение, здесь главное потренироваться строить структуру и связи. 
 Послушать про нормализацию: https://www.youtube.com/watch?v=gDDrpL75LJY&t=1s
+#
 good
 ---
 id pk int 
@@ -217,7 +218,7 @@ phone int
 login varchar(25)
 password varchar(25)
 
-
+#
 products
 ---
 id int PK
@@ -273,5 +274,90 @@ city char(80)
 provice char(50)
 country char(40)
 postal_code varchar(7)
+
+# HW_3_dt_22_dec_2020 From the model to the conversion of that into data base 
+# and visualization of that in the admin dashboard
+1. Create fr example Lesson_5_1:
+   cd C:\Everything\IT\Testing\Automation_08_09_2019\Python_project_Nick_Sokolov
+   mkdir Lesson_5_1 
+   cd Lesson_5_1 
+2. Create virtual environment:
+   python --version
+   python -m venv les5_1env
+   cd Lesson_5_1 # ..\..\ two levels up
+   cd les5_1env
+   cd Scripts
+   activate.bat
+3. Install django
+   pip install django
+4. Create folder for project
+   mkdir online_store5_1
+   django-admin startproject core . # . dot is here to do not create excessive folder/s
+   dir
+   python manage.py startapp products5_1 # opens the app "products5_1"
+5. Run PyCharm, tune(open File/New Project, Pure Python, choose online_store5_1) 
+   And in Previously configured interpreter we choose C:\Everything\IT\Testing\Automation_08_09_2019\Python_project_Nick_Sokolov\Lesson_5_1\les5_1env\Scripts\python.exe
+   Create from existing sources
+   This window/New window
+6. Open MsSQL WorkBench, root password: MyUSA2016!@
+   Create a new schema in the connected server
+   Choose Charset: utf8mb4; Collation: utf8_general_ci; Apply+Apply+Finish;
+   Go to Administration/Users and Privileges
+   Login name: online_store_user5
+   Authentication type: Standard
+   Limit to host matching: localhost
+   Password: MyUSA2016!@
+   Apply
+   Go to Schema Privileges/Add Entry/Selected Schema(radio buton): les_5_1_online_store
+   Choose all privileges
+7. Go/open to PyCharm, 
+   go to C:\Everything\IT\Testing\Automation_08_09_2019\Python_project_Nick_Sokolov\Lesson_5_1\mysql.cnf
+   create mysql.cnf and insert code: 
+   [client]
+   database = les_5_1_online_store
+   user = online_store_user5
+   password = MyUSA2016!@
+   default-character-set = utf8
+8. Go to C:\Everything\IT\Testing\Automation_08_09_2019\Python_project_Nick_Sokolov\Lesson_5_1\online_store5_1\core\settings.py
+   insert code:
+   DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': 'C:\Everything\IT\Testing\Automation_08_09_2019\Python_project_Nick_Sokolov\Lesson_5_1\mysql.cnf',
+           },
+       }
+   }
+9. Make migrations:
+   python manage.py migrate # We do not do here: python manage.py makemigrations, because default models are created in Django
+   pip install mysqlclient
+   python manage.py migrate # Find file in CMD: dir sql_workspaces.* /s (c:\Users\rapid\AppData\Roaming\MySQL\Workbench)
+   work with tabs of MySQL Workbench: View/Panels; Navigator/Schemas
+10. go to products5_1/models.py
+   write code:
+   class Product(models.Model):
+    class Meta:
+        db_table = 'products'
+        verbose_name = 'Good'
+        verbose_name_plural = 'Goods'
+
+    title = models.CharField(blank=False, null=False, max_length=200, verbose_name='Title')
+    price = models.FloatField(blank=False, null=False, verbose_name='Price') 
+    
+   python manage.py makemigrations
+   got to settings.py and insert to INSTALLED_APPS:
+   'products5_1'
+N.B. For Clients and for Orders create separate apps
+   
+
+   
+      
+   
+   
+
+   
+   
+   
+
 
 
