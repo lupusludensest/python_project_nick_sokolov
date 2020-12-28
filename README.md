@@ -277,7 +277,7 @@ postal_code varchar(7)
 
 # HW_3_dt_22_dec_2020 From the model to the conversion of that into data base 
 # and visualization of that in the admin dashboard
-1. Create fr example Lesson_5_1:
+1. Create for example Lesson_5_1:
    cd C:\Everything\IT\Testing\Automation_08_09_2019\Python_project_Nick_Sokolov
    mkdir Lesson_5_1 
    cd Lesson_5_1 
