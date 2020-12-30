@@ -177,7 +177,7 @@ time_update datetime
 5. Покупатель
 Поля на ваше усмотрение, здесь главное потренироваться строить структуру и связи. 
 Послушать про нормализацию: https://www.youtube.com/watch?v=gDDrpL75LJY&t=1s
-#
+# 1
 good
 ---
 id pk int 
@@ -187,6 +187,7 @@ model varchar(25)
 price float
 status varchar(3)
 
+# 2
 category
 ---
 id pk int
@@ -194,11 +195,13 @@ category_id int FK -< good.id
 name varchar(35)
 description varchar(40)
 
+# 3
 cart
 ---
 id pk int FK -< order.id
 good varchar(35)
 
+# 4
 order
 ---
 id pk int FK -< good.id
@@ -207,6 +210,7 @@ date datetime
 good varchar(35)
 quantity_of_units int
 
+# 5
 customer
 ---
 id pk int FK - cart.id
@@ -218,7 +222,7 @@ phone int
 login varchar(25)
 password varchar(25)
 
-#
+# 1
 products
 ---
 id int PK
@@ -229,38 +233,21 @@ color char(25)
 description text
 price money
 
-products_catecories
----
-id int PK
-product_id int FK >- products.id
-category_id int FK >- categories.id
-
+# 2
 categories
 ---
 id int PK
 category varchar(30)
 description text
 
-orders
+# 3
+products_catecories
 ---
 id int PK
-client_id int FK >- client.id
-date datetime
-pyment_method char(20)
-delivery_method char(30)
-delivery_date datetime
-total_price money
+product_id int FK >- products.id
+category_id int FK >- categories.id
 
-carts
----
-id int PK
-order_id int FK >- orders.id
-product_id int FK >- products
-date datetime
-item_price money
-product_quantity int
-sub_total money
-
+# 4
 client
 ---
 id int PK
@@ -271,9 +258,33 @@ email varchar(60)
 password varchar(25)
 address varchar(40)
 city char(80)
-provice char(50)
+state char(50)
 country char(40)
-postal_code varchar(7)
+postal_code varchar(5)
+
+# 5
+orders
+---
+id int PK
+client_id int FK >- client.id
+date datetime
+payment_method char(20)
+delivery_method char(30)
+delivery_date datetime
+total_price money
+
+# 6
+carts
+---
+id int PK
+order_id int FK >- orders.id
+product_id int FK >- products.id
+date datetime
+item_price money
+product_quantity int
+sub_total money
+
+
 
 # HW_3_dt_22_dec_2020 From the model to the conversion of that into data base 
 # and visualization of that in the admin dashboard
