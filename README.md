@@ -222,69 +222,129 @@ phone int
 login varchar(25)
 password varchar(25)
 
-# 1
+#1
+contact
+---
+id int PK
+first_name char(60)
+last_name char(60)
+middle_name char(60)
+prefix char(10)
+company_name char(80)
+contact_type char(60)
+address char(200)
+city char(40)
+state char(40)
+country char(40)
+postal_code char(7)
+phone varchar(60)
+email varchar(30)
+create_time datatime(10)
+
+#2
+supplier
+---
+id int PK
+contact_id int FK -< contact.id
+contract_no varchar(45)
+contract_title varchar(50)
+suplier_type char(40)
+contr_eff_date datetime(10)
+contr_exp_date datetime(10)
+logo image
+
+#3
+client
+---
+id int PK
+contact_id int FK -< contact.id
+date_entered datetime(10)
+password varchar(25)
+birthday datetime(10)
+client_type varchar(40)
+
+#4
+shipper
+---
+id int PK
+contact_id int FK -< contact.id
+contract_no varchar(45)
+contract_title varchar(50)
+shipper_type char(40)
+contr_eff_date datetime(10)
+contr_exp_date datetime(10)
+logo image
+
+#5
 products
 ---
 id int PK
+suplier_id int FK >- supplier.id
 product_name varchar(50)
 product_brand varchar(40)
 year_of_manufacture int
 color char(25)
 description text
-price money
+quantity_per_unit int
+unit_price money
+product_image image
+size varchar(30)
+weight decimal(7,3)
 
-# 2
+#6
 categories
 ---
 id int PK
 category varchar(30)
 description text
 
-# 3
+#7
 products_catecories
 ---
 id int PK
 product_id int FK >- products.id
 category_id int FK >- categories.id
 
-# 4
-client
----
-id int PK
-first_name char(60)
-last_name char(60)
-nick_name varchar(60)
-email varchar(60)
-password varchar(25)
-address varchar(40)
-city char(80)
-state char(50)
-country char(40)
-postal_code varchar(5)
-
-# 5
-orders
+#8
+rating
 ---
 id int PK
 client_id int FK >- client.id
-date datetime
+product_id int FK >- products.id
+date_posted datetime(10)
+rating decimal(2,1)
+comment text
+
+#9
+order
+---
+id int PK
+client_id int FK >- client.id
+shipper_id int FK >- shipper.id
+order_date datetime
 payment_method char(20)
 delivery_method char(30)
 delivery_date datetime
 total_price money
+sale_tax money
+discount decimal(3,2)
+total_discount money
+paid money
+transaction_status varchar(20)
 
-# 6
-carts
+#10
+cart
 ---
 id int PK
-order_id int FK >- orders.id
+order_id int FK >- order.id
 product_id int FK >- products.id
 date datetime
 item_price money
 product_quantity int
 sub_total money
-
-
+sale_tax money
+discount decimal(3,2)
+total_discount money
 
 # HW_3_dt_22_dec_2020 From the model to the conversion of that into data base 
 # and visualization of that in the admin dashboard
