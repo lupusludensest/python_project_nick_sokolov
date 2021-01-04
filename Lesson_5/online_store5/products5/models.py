@@ -2,7 +2,7 @@ from django.db import models
 
 class Product(models.Model):
     class Meta:
-        db_table = 'products5'
+        db_table = 'products'
         verbose_name = 'Good'
         verbose_name_plural = 'Goods'
 

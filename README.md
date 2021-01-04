@@ -386,7 +386,7 @@ total_discount money
    create mysql.cnf and insert code: 
    [client]
    database = les_5_1_online_store
-   user = online_store_user5
+   user = online_store_user5_1
    password = MyUSA2016!@
    default-character-set = utf8
 8. Go to C:\Everything\IT\Testing\Automation_08_09_2019\Python_project_Nick_Sokolov\Lesson_5_1\online_store5_1\core\settings.py
