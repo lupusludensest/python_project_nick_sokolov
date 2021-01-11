@@ -3,11 +3,12 @@ from clients.models import Client
 from products.models import Product
 
 # 1
-class Order(models.Model):
+class Order(models.Model): # Starts from the capital letter and always singular
     class Meta:
-        db_table = 'orders'
-        verbose_name = 'Order'
-        verbose_name_plural = 'Orders'
+        db_table = 'orders' # Starts from the lowercase letter and can be plural
+        verbose_name = 'Order' # Starts from the capital letter and always singular
+        verbose_name_plural = 'Orders' # Starts from the capital letter and always plural
+
     client = models.ForeignKey(Client, blank=False, null=False, verbose_name='Client', on_delete=models.CASCADE)
     date = models.DateField(blank=False, null=False, editable=True, verbose_name='Data')
     pyment_method = models.CharField(blank=False, null=False, max_length=20, editable=True, verbose_name='Payment method')
