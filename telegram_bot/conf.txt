@@ -1,0 +1,5 @@
+[client]
+database = telegram_bot
+user = telegram_bot_user
+password = MyUSA2016!@
+default-character-set = utf8
