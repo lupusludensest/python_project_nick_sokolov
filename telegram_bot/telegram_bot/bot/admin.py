@@ -9,3 +9,12 @@ class SubscriberAdmin(admin.ModelAdmin):
         'user_name',
         'telegram_id'
     ]
+
+@admin.register(Message)
+class MessageAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'sending_time',
+        'is_sent',
+        'message_text'
+    ]

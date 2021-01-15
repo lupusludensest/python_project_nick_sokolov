@@ -12,3 +12,16 @@ class Subscriber(models.Model):
     telegram_id = models.BigIntegerField(blank=False, null=False, verbose_name='Telegram ID')
 
 
+class Message(models.Model):
+    class Meta:
+        db_table = 'messages'
+        verbose_name = 'Message'
+        verbose_name_plural = 'Messages'
+
+    sending_time = models.DateTimeField(blank=True, null=True, verbose_name='Sending time')
+    is_sent = models.BooleanField(default=False, verbose_name='Is sent')
+    message_text = models.TextField(max_length=999, blank=False, null=False, verbose_name='Message text')
+
+
+
+
