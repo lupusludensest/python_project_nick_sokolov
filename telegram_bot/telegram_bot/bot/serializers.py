@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import Subscriber, Message
+from .models import *
+# from .models import Subscriber, Message
 
 
 class SubscriberListSerializer(serializers.ModelSerializer):
@@ -11,7 +12,9 @@ class SubscriberListSerializer(serializers.ModelSerializer):
 class MessageListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
-        fields = '__all__'
-        # fields = ['id',
-        #           'message_text'
-        #           ]
+        fields = ['id',
+                  'sending_time',
+                  'is_sent',
+                  'message_text',
+                  ]
+        # fields = '__all__'
