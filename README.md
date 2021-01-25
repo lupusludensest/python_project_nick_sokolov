@@ -236,7 +236,7 @@ address char(200)
 city char(40)
 state char(40)
 country char(40)
-postal_code char(7)
+postal_code char(5)
 phone varchar(60)
 email varchar(30)
 create_time datatime(10)
@@ -419,6 +419,20 @@ total_discount money
    got to settings.py and insert to INSTALLED_APPS:
    'products5_1'
 N.B. For Clients and for Orders create separate apps
+
+##########
+Домашка. 24 jan 2021
+Часть 1:
+Самостоятельно ознакомиться с механизмом работы JWT, https://m.habr.com/ru/post/340146/
+
+Часть 2:
+Строим ER диаграму для CRM системы автосалона. Основные сущности:
+1. Менеджер автосалона (user)
+2. Клиент автосалона
+3. Каталог авто
+4. Покупки клиентов
+5. ToDo list для менеджеров
+Это минимум, проявите фантазию, некоторые сущности можно расширить.
    
 
    
