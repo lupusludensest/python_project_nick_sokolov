@@ -6,15 +6,15 @@ url = "https://api.bittrex.com/v3/currencies"
 data = requests.get(url)
 data_json = data.json()
 
-print(f'There are: "{len(data_json)}" strings in json\n')
+print(f'Total there are: "{len(data_json)}" strings in json, type of data_json is {type(data_json)}')
 
-# print(data_json[0])
-# print(data_json[1]['symbol'])
-# print(data_json[1]['name'])
+print(data_json[0], '\n')
+# print(data_json[1]['symbol'], '\n')
+# print(data_json[1]['name'], '\n')
 
-for i in data_json:
-    print(i['name'])
-    time.sleep(0)
+for symbol in data_json:
+    print(symbol['name'])
+    time.sleep(0.0000000001)
 
 # while True:
 #     print(f'Hello,')
@@ -22,8 +22,8 @@ for i in data_json:
 #     print(f'world!')
 
 # Home work 1, endless while loop, with sound, BTC/USD
-# 1. https://bittrex.github.io/api/v3 open this choose json what you need, copy past it to url
-# 2. https://api.bittrex.com/v3/currencies
-# 3. https://api.bittrex.com/v3/currencies/4ART
-# 4. https://api.bittrex.com/v3/markets/BTC-USD/ticker copy past ctr+a->ctrl+c->ctrl+v to
-# 5. http://jsonviewer.stack.hu/ makes json readable, paste->format
+# https://bittrex.github.io/api/v3
+# http://jsonviewer.stack.hu/
+# https://api.bittrex.com/v3/currencies
+# https://api.bittrex.com/v3/currencies/4ART
+# https://api.bittrex.com/v3/markets/BTC-USD/ticker

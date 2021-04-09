@@ -12,7 +12,7 @@ url = "https://api.bittrex.com/v3/currencies"
 data = requests.get(url)
 data_json = data.json()
 
-print(f'Total there are: "{len(data_json)}" strings in json')
+print(f'Total there are: "{len(data_json)}" strings in json, type of data_json is {type(data_json)}')
 
 print(f'{"*"*80}') # Just delimeter
 
