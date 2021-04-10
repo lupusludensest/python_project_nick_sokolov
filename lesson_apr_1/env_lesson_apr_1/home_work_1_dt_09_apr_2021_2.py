@@ -23,7 +23,7 @@ while True:
     date = datetime.now()
     bitcoin_history.append({'date': date, 'price': text_from()})
     print(bitcoin_history[-1].values()) # how to compare bitcoin_history.element[-1] with bitcoin_history.element[-2]
-    print(bitcoin_history, type(bitcoin_history))
+    # print(bitcoin_history, type(bitcoin_history))
     # if False:
     #     winsound.Beep(freq, duration)
     time.sleep(20)
