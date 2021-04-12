@@ -1,6 +1,8 @@
 import requests
 import time
-import simpleaudio
+import winsound
+freq = 440  # Hz
+duration = 2000  # milliseconds
 import sys
 
 class CryptoTracker:
@@ -25,12 +27,11 @@ class CryptoTracker:
                     print(
                         f"The price for {self.currencies_pair} went up by {round(new_price - self.initial_price, 2)}. "
                         f"The new price is: {new_price}")
-                    sound = simpleaudio.WaveObject.from_wave_file("wake.wav").play()
-                    sound.wait_done()
+                    winsound.Beep(freq, duration)
                 self.initial_price = new_price
             else:
                 print(f"Something went wrong. Response code = {response.status_code}")
-            time.sleep(30)
+            time.sleep(20)
 
 if len(sys.argv) > 1:
     CryptoTracker(sys.argv[1]).track_changes()
