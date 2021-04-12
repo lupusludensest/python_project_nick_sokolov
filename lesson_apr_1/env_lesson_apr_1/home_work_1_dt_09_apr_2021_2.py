@@ -15,10 +15,10 @@ def price_tracking():
                 starting_price = current_price
                 print(f'Current price: "{current_price}"')
             elif starting_price >= current_price:
-                print(f'Current price does not grow or failed.')
+                print(f'Current price does not grow or failed for "{round((starting_price - current_price), 2)}"')
             elif starting_price < current_price:
                 winsound.Beep(freq, duration)
-                print(f'Current price "{current_price}" > previous price, price rised for "{round((current_price - starting_price), 2)}"')
+                print(f'Current price "{current_price}" is more than previous price, it rised for "{round((current_price - starting_price), 2)}"')
             starting_price = current_price
         else:
             print(f'Server responce code "{response.status_code}"')
