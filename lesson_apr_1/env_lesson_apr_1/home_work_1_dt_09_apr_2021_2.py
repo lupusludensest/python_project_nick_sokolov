@@ -25,6 +25,4 @@ def price_tracking():
         time.sleep(20)
 
 print(price_tracking())
-print(price_tracking())
-
 
