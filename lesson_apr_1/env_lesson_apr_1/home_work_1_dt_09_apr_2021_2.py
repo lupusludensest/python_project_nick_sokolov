@@ -1,8 +1,7 @@
 import requests
 import time
 import winsound
-freq = 440  # Hz
-duration = 2000  # milliseconds
+freq, duration  = 440, 2000   # Hz/milliseconds
 
 def price_tracking():
     starting_price = 0
@@ -25,6 +24,7 @@ def price_tracking():
             print(f'Server responce code "{response.status_code}"')
         time.sleep(20)
 
+print(price_tracking())
 print(price_tracking())
 
 
