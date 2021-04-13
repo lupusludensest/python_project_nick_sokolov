@@ -10,7 +10,7 @@ def price_tracking():
         response = requests.get(bitcoin_api_url)
         response_json = response.json()
         if response.ok: # A boolean indicating whether the response was successful (status in the range 200–299) or not
-            current_price = float(response_json['lastTradeRate']) # 'lastTradeRate' is a key used as index
+            current_price = float(response_json['lastTradeRate']) # 'lastTradeRate' is a key used as an index
             if starting_price == 0:
                 starting_price = current_price
                 print(f'Current price: "{current_price}"')
@@ -25,4 +25,3 @@ def price_tracking():
         time.sleep(20)
 
 print(price_tracking())
-
