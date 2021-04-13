@@ -33,7 +33,9 @@ class CryptoTracker:
                 print(f"Something went wrong. Response code = {response.status_code}")
             time.sleep(20)
 
-if len(sys.argv) > 1:
-    CryptoTracker(sys.argv[1]).track_changes()
+if len(sys.argv) > 1: #  is the number of command-line arguments.
+    CryptoTracker(sys.argv[1]).track_changes() #  is the program script name
+    print(CryptoTracker(sys.argv[1]).track_changes())
 else:
     CryptoTracker().track_changes()
+    print(CryptoTracker().track_changes())
