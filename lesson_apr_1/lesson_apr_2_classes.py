@@ -40,13 +40,13 @@ print(len(h2), h2)
 #
 # # h2.bag.append('Candy')
 # # h2.bag.append('Water')
-h2.put_to_bag('Hamburger')
-h2.put_to_bag('Condoms')
-h2.put_to_bag('Vibrator')
-sum_bags = h1 + h2
-print(sum_bags)
-
-print(len(h2), h2)
+# h2.put_to_bag('Hamburger')
+# h2.put_to_bag('Condoms')
+# h2.put_to_bag('Vibrator')
+# sum_bags = h1 + h2
+# print(sum_bags)
+#
+# print(len(h2), h2)
 
 #
 # h2.move()
