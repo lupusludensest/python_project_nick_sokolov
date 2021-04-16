@@ -22,7 +22,7 @@ class Car:
         print(f'There are "{int(self.car_passangers)}" passangers are in the {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers} ')
 
     def passangers_get_in(self, psngrs_qntty = int(input('Enter quantity of the passangers: \n'))):
-        if psngrs_qntty <= self.max_passangers: # self.car_passangers < self.max_passangers and
+        if psngrs_qntty <= self.max_passangers:
             print_out = (f'{psngrs_qntty} passangers are in the {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers}')
             self.car_passangers += psngrs_qntty
         elif psngrs_qntty == self.max_passangers:
