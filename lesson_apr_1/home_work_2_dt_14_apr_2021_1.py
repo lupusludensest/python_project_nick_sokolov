@@ -26,10 +26,10 @@ class Car:
             print_out = (f'{psngrs_qntty} passangers are in the {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers}')
             self.car_passangers += psngrs_qntty
         elif psngrs_qntty == self.max_passangers:
-            print_out = (f'Max passangers! {psngrs_qntty} passangers are in the {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers}')
+            print_out = (f'Max passangers! {psngrs_qntty} passanger/s is/are in the {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers}')
             self.car_passangers += self.max_passangers
         elif psngrs_qntty > self.max_passangers:
-            print_out = (f'No more passangers! {psngrs_qntty} passangers are in the {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers}')
+            print_out = (f'No more passangers! {psngrs_qntty - self.max_passangers} passengers are excessive to the  {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers}')
             self.car_passangers += self.max_passangers
         return print(print_out)
 
