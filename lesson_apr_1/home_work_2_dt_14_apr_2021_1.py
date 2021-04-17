@@ -4,9 +4,8 @@ freq, duration  = 380, 2000   # Hz/milliseconds
 
 class Car:
     def __init__(self, make, model, year, color, doors, ext_type, drive, gas_hybr_elect, horse_power, price, max_passangers):
-        self.car_make, self.car_model, self.car_year, self.car_color, self.car_doors, self.car_ext_type, self.car_drive, self.car_gas_hybr_elect, self.car_horse_power, self.car_price, self.max_passangers, self.car_passangers \
-        = make, model, year, color, doors, ext_type, drive, gas_hybr_elect, horse_power, price, max_passangers, 0
-        self.car_pssngrs_as_prsns = []
+        self.car_make, self.car_model, self.car_year, self.car_color, self.car_doors, self.car_ext_type, self.car_drive, self.car_gas_hybr_elect, self.car_horse_power, self.car_price, self.max_passangers, self.car_passangers, self.car_pssngrs_as_prsns \
+        = make, model, year, color, doors, ext_type, drive, gas_hybr_elect, horse_power, price, max_passangers, 0, []
         print(f'Car: {make}, {model}, year:{year}, {color}, doors:{doors}, {ext_type}, {drive}, {gas_hybr_elect}, horse power:{horse_power}, price: ${price}, max passangers: {max_passangers}\n')
 
     def ordered(self):
