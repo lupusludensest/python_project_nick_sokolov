@@ -34,6 +34,7 @@ class Car:
             mssg = f'{psngr_nm} got the car, but no more space! {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers} '
             self.car_pssngrs_as_prsns.append(psngr_nm)
         elif len(self.car_pssngrs_as_prsns) + 1  > self.max_passangers:
+            winsound.Beep(freq, duration)
             mssg = f'No more space! in {self.car_make}/{self.car_model}/year:{self.car_year}/{self.car_color}/doors:{self.car_doors}/exterior type:{self.car_ext_type}/{self.car_drive}/{self.car_gas_hybr_elect}/horse power:{self.car_horse_power}/${self.car_price}/max.pass.:{self.max_passangers} '
         return print(mssg)
 
