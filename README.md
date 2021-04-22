@@ -222,6 +222,8 @@ phone int
 login varchar(25)
 password varchar(25)
 
+# ********************
+
 #1
 contact
 ---

@@ -5,7 +5,7 @@ id int PK
 title varchar(200)
 description text
 is_completed bool
-time_create datatime
+time_create datetime
 time_update datetime
 priority int
 status_id int FK >- status.id
@@ -65,7 +65,73 @@ id int PK
 title varchar(50)
 board_template_id int FK >- board_templates.id
 
+# ********************
+
 # Home_work_4 ERD of some blog
+# 1
+user
+---
+id int PK
+title varchar(50)
+description varchar(250)
+time_create datetime
+time_update datetime
+
+# 2
+posts
+---
+id int PK
+post_id int FK >- user.id 
+friend_id int FK >- friends.friend_id
+blog_id int FK >- blogs.id
+title varchar(50)
+post_body text
+time_create datetime
+time_update datetime
+
+# 3
+friends
+---
+id int PK
+post_id int FK
+friend_id int FK >- user.id 
+title varchar(50)
+time_connect datetime
+time_disconnect datetime
+
+# 4
+boards
+---
+id int PK
+board_id int FK >- user.id
+title varchar(250)
+is_active bool
+
+# 5
+blogs
+---
+id int PK
+description varchar(250)
+time_create datetime
+time_update datetime
+
+
+#6
+board_templates
+---
+id int PK
+title varchar(50)
+
+#7
+status_board_templates
+---
+id int PK
+title varchar(50)
+board_template_id int FK >- board_templates.id
+
+
+
+
 
 
 
