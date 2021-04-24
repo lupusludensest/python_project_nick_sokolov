@@ -107,14 +107,14 @@ title varchar(150)
 description varchar(250)
 time_create datetime
 time_update datetime
-category_img image
+category_img_url varchar(200)
 
 # 5
 post_categories
 ---
 id int PK
 post_id int FK >- posts.id
-categories_id int FK >- categories.id
+categories_id int FK -< categories.id
 time_create datetime
 time_update datetime
 
@@ -137,7 +137,7 @@ title varchar(150)
 description varchar(250)
 time_create datetime
 time_update datetime
-category_img image
+category_img_url varchar(200)
 
 # 8
 posts_tags
