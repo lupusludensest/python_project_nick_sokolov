@@ -361,9 +361,6 @@ total_discount money
    cd les5_1env
    cd Scripts
    activate.bat
-   pip install requests
-   "https://api.bittrex.com/v3/currencies"
-   "https://api.bittrex.com/v3/currencies/{symbol}"
 3. Install django
    pip install django
 4. Create folder for project
@@ -442,6 +439,12 @@ N.B. For Clients and for Orders create separate apps
 #########
 
 Если кириллица впереди: -*- coding: utf-8 -*-
+
+#########
+Work woth REST API from PyCharm
+pip install requests
+"https://api.bittrex.com/v3/currencies"
+"https://api.bittrex.com/v3/currencies/{symbol}"
    
 
    
