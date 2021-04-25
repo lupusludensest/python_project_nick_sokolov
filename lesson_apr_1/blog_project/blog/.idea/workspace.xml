@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2426d060-6cae-4438-b778-f7289477cfb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Lesson_5/online_store5/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../blog_24_apr/.idea/blog_24_apr.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../blog_24_apr/django_blog/.idea/django_blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Lesson_5/online_store5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lesson_5/online_store5/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Lesson_5/online_store5/.idea/online_store.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lesson_5/online_store5/.idea/online_store.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619308260268</updated>
       <workItem from="1619308261421" duration="239000" />
+      <workItem from="1619320878671" duration="1011000" />
     </task>
     <servers />
   </component>
