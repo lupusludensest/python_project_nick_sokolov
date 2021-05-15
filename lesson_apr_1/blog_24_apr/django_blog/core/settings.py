@@ -117,10 +117,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+# STATIC_URL = '/static/'
 
-STATIC_URL = '/static/'
-
+STATIC_URL = '/images/'
+STATICFILES_DIRS = [
+    'C:\Everything\IT\Testing\Automation_08_09_2019\Python_project_Nick_Sokolov\lesson_apr_1\\blog_24_apr\django_blog\images',
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

@@ -13,12 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
-from django_blog.views import my_first_page
+from django_blog.views import my_test_view, my_first_page, main_feed, get_post
 
 urlpatterns = [
-    path('page/', my_first_page)
+    path('test/', my_test_view),
+    path('page/', my_first_page),
+    path('list/', main_feed),
+    path('post/<int:post_id>/', get_post)
 ]
-
-# http://127.0.0.1:8000/test/
