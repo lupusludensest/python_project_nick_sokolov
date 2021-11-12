@@ -355,7 +355,12 @@ total_discount money
    mkdir Lesson_5_1 
    cd Lesson_5_1 
 2. Create virtual environment:
-   python --version
+   python --version 
+   (ставить желаемую версию питона: virtualenv venv --python=python2.7, 
+   virtualenv venv --python=/usr/local/bin/python,
+   Просто используйте параметр --python (или короткий -p) при создании экземпляра virtualenv, 
+   чтобы указать исполняемый файл Python, который вы хотите использовать, например:
+   virtualenv --python=/usr/bin/python2.6 <path/to/new/virtualenv/>)
    python -m venv les5_1env
    cd Lesson_5_1 # ..\..\ two levels up
    cd les5_1env
