@@ -532,6 +532,15 @@ post_id int FK >- posts.id
 tags_id int FK >- tags.id
 
 
+# Git commands for GitHub and GitLab
+git status
+git add --all/git add .
+git commit -m "name_of_commit"
+git push
+git pull
+git clone "name_of_the GitHubOrGitLab_repo"
+git push --set-upstream origin "name_of_the_repo_on_client_side"
+
    
 
    
