@@ -533,13 +533,42 @@ tags_id int FK >- tags.id
 
 
 # Git commands for GitHub and GitLab
-git status
+copy NUL .gitconfig
+git config --list --global
+#
+git clone name_of_the GitHubOrGitLab_repo
+git status 
+# cat file_name.extension 
+# git log 
+# git log --author name_of_author 
+# git show 1fafe868f2d74df796befd864521ae7b90e2987a
+# git  blame file_name.extension
+# git diff
+# git reset HEAD~1 
+# git merge --abort
+# git checkout file_name.extension // cancel last commit
+# git restore --staged <file>..." to unstage // cancel last commit
+# git stash // adding changes to limbo
+# git stash pop // checking changes in limbo
+# git stash clear // cancel changes in limbo
+# git push -u name_of_branch // connect local repository with remote
 git add --all/git add .
+git status
 git commit -m "name_of_commit"
+git status
 git push
+git status
 git pull
-git clone "name_of_the GitHubOrGitLab_repo"
+# merge request after code review
+git branch name_of_new_branch // create new branch of old one
+git branch // screen out branches
+git checkout name_of_new_branch // turn on to branch
+git checkout -B name_of_new_branch
 git push --set-upstream origin "name_of_the_repo_on_client_side"
+
+#Linux/Unix/CLI
+echo "new_line" >> new_file.name // create ew file with new line
+cat new_file.name // check changes in the ew file
 
    
 
