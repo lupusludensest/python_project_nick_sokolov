@@ -558,12 +558,13 @@ git commit -m "name_of_commit"
 git status
 git push
 git status
-git pull
+git pull/git diff/check GitLab/GitHub yourself
 # merge request after code review
 git branch name_of_new_branch // create new branch of old one
 git branch // screen out branches
 git checkout name_of_new_branch // turn on to branch
-git checkout -B name_of_new_branch
+git checkout -B name_of_new_branch // create new branch in CLI/Unix/Bash/Shell
+git checkout name_of_new_branch // select specific the branch
 git push --set-upstream origin "name_of_the_repo_on_client_side"
 
 #Linux/Unix/CLI
