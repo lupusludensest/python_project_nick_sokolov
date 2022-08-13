@@ -542,7 +542,7 @@ git status
 # git log 
 # git log --author name_of_author 
 # git show 1fafe868f2d74df796befd864521ae7b90e2987a
-# git  blame file_name.extension
+# git blame file_name.extension
 # git diff
 # git reset HEAD~1 
 # git merge --abort
